@@ -7,21 +7,22 @@ var adventures = [
         name: 'Howard Amon'
     }
 ];
+
 var id = 7;
 
 function get(id) {
-    return _.findWhere(people, {id: parseInt(id + '', 10)});
+    return _.findWhere(adventures, {id: parseInt(id + '', 10)});
 }
 
 exports.list = function (req, res) {
-    res.send(people);
+    res.send(adventures);
 };
 
 exports.add = function (req, res) {
-    var person = req.body;
-    person.id = id++;
-    people.push(person);
-    res.status(201).send(person);
+    var adventure = req.body;
+    adventure.id = id++;
+    adventures.push(adventure);
+    res.status(201).send(adventure);
 };
 
 exports.get = function (req, res) {
@@ -32,7 +33,7 @@ exports.get = function (req, res) {
 
 exports.delete = function (req, res) {
     var found = get(req.params.id);
-    if (found) people = _.without(people, found);
+    if (found) adventures = _.without(adventures, found);
     res.status(found ? 200 : 404);
     res.send(found);
 };

@@ -12,7 +12,15 @@ module.exports = PageView.extend({
         this.renderCollection(
         	this.collection,
         	AdventureView,
-        	this.$('#adventures')[0]
+        	this.$('#adventures')
         );
+
+        if (!this.collection.length) {
+            this.fetchCollection();
+        }
+    },
+    fetchCollection: function () {
+        this.collection.fetch();
+        return false;
     }
 });

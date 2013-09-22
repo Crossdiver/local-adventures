@@ -56,11 +56,11 @@ var clientApp = new Moonboots({
 
 // Set up our little demo API
 var api = require('./fakeApi');
-app.get('/api/people', api.list);
-app.get('/api/people/:id', api.get);
-app.delete('/api/people/:id', api.delete);
-app.put('/api/people/:id', api.update);
-app.post('/api/people', api.add);
+app.get('/api/aventures', api.list);
+app.get('/api/adventures/:id', api.get);
+app.delete('/api/adventures/:id', api.delete);
+app.put('/api/adventures/:id', api.update);
+app.post('/api/adventures', api.add);
 
 // Enable the functional test site in development
 if (config.isDev) {
