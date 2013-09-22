@@ -14,6 +14,7 @@ module.exports = PageView.extend({
     },
     render: function () {
         this.renderAndBind();
+        $('body').attr('id', 'pageCollectionDemo');
         this.renderCollection(this.collection, PersonView, this.$('.people')[0]);
         if (!this.collection.length) {
             this.fetchCollection();

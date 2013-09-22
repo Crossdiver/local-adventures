@@ -21,13 +21,22 @@ exports.body = function anonymous(locals) {
 exports.head = function anonymous(locals) {
     var buf = [];
     with (locals || {}) {
-        buf.push('<meta name="viewport" content="width=device-width,initial-scale=.75,maximum-scale=.75"/><meta name="apple-mobile-web-app-capable" content="yes"/><link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon"/><link href="//fonts.googleapis.com/css?family=Raleway:200,400,600" rel="stylesheet" type="text/css"/>');
+        buf.push('<meta name="viewport" content="width=device-width,initial-scale=.75,maximum-scale=.75"/><meta name="apple-mobile-web-app-capable" content="yes"/><link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon"/><link href="//fonts.googleapis.com/css?family=Raleway:200,400,600" rel="stylesheet" type="text/css"/><link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" typ="text/css"/>');
     }
     return buf.join("");
 };
 
 // adventure.jade compiled template
 exports.includes.adventure = function anonymous(locals) {
+    var buf = [];
+    with (locals || {}) {
+        buf.push('<li class="adventure"><span class="name"></span><span> <a href="#" class="delete">delete</a></span></li>');
+    }
+    return buf.join("");
+};
+
+// adventures.jade compiled template
+exports.includes.adventures = function anonymous(locals) {
     var buf = [];
     with (locals || {}) {
         buf.push('<li class="adventure"><span class="name"></span><span> <a href="#" class="delete">delete</a></span></li>');
@@ -44,6 +53,15 @@ exports.includes.person = function anonymous(locals) {
     return buf.join("");
 };
 
+// collectionDemo.jade compiled template
+exports.pages.collectionDemo = function anonymous(locals) {
+    var buf = [];
+    with (locals || {}) {
+        buf.push('<section class="page pageOne"><h2>Collection demo</h2><p>Intelligently rendering collections can be a bit tricky. </p><p><a href="https://github.com/henrikjoreteg/human-view">HumanView\'s</a> <code>renderCollection()</code> method makes it sipmle.</p><p>The only code requried to manage the collection is:</p><pre><code>this.renderCollection(\n   this.collection, \n   PersonView, \n   this.$(\'.people\')[0]\n);</code></pre><h3>People container:</h3><div class="people"></div><p>Try it by clicking the buttons</p><div class="buttons"><button class="btn reset">.reset()</button><button class="btn fetch">.fetch()</button><button class="btn shuffle">.shuffle()</button><button class="btn add">Generate Random Person</button></div><p>Events are always managed so you don\'t get any leaks.</p></section>');
+    }
+    return buf.join("");
+};
+
 // home.jade compiled template
 exports.pages.home = function anonymous(locals) {
     var buf = [];
@@ -53,11 +71,20 @@ exports.pages.home = function anonymous(locals) {
     return buf.join("");
 };
 
+// info.jade compiled template
+exports.pages.info = function anonymous(locals) {
+    var buf = [];
+    with (locals || {}) {
+        buf.push('<section class="page pageTwo"><h2>More Info</h2><p>This is a demo app by <a href="http://twitter.com">Henrik Joreteg</a>.</p><h4>Relevant links:</h4><ul><li> <a href="http://humanjavascript.com">human javascript</a> &mdash; the book</li><li> <a href="https://github.com/HenrikJoreteg/humanjs-sample-app">github repo </a> &mdash; for this app</li><li> <a href="http://andyet.com">&yet</a> &mdash; The company behind this effort.</li></ul><h4>Finding Packages</h4><ul><li><a href="http://projects.joreteg.com/humanjs-resources/">humanjs resources</a> &mdash; A few curated modules with a quick search</li><li><a href="https://github.com/component">Component </a> &mdash; Lots of tools here in tiny modules. Most are on npm as {{name}}-component</li><li><a href="http://browserify.org/search">Browserify module search</a> &mdash; Searches npm for browserify packages</li></ul><h4>Apps Built this way</h4><ul><li> <a href="http://andbang.com">And Bang</a> &mdash; Team same-pagification tool. Realtime chat + task management</li><li> <a href="http://talky.io">Talky </a> &mdash; Free, zero-setup, no-account, peer-to-peer encrypted video calls</li></ul></section>');
+    }
+    return buf.join("");
+};
+
 // search.jade compiled template
 exports.pages.search = function anonymous(locals) {
     var buf = [];
     with (locals || {}) {
-        buf.push('<section class="page pageOne"><h2>Search for Adventures</h2><p>Do you like adventuring? We do!</p><iframe width="100%" height="300" frameborder="0" src="http://a.tiles.mapbox.com/v3/crossdiver.map-bn8vfpfw.html#12/46.31030004039056/-119.30070877075194"></iframe><div id="adventures"></div></section>');
+        buf.push('<section class="page pageSearch"><iframe width="100%" height="300" frameborder="0" src="http://a.tiles.mapbox.com/v3/crossdiver.map-bn8vfpfw.html#12/46.31030004039056/-119.30070877075194"></iframe><div id="adventures"></div></section>');
     }
     return buf.join("");
 };

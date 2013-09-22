@@ -8,6 +8,7 @@ module.exports = PageView.extend({
     template: templates.pages.home,
     render: function () {
         this.renderAndBind();
+        $('body').attr('id', 'pageHome');
     },
     fetchCollection: function () {
         this.collection.fetch();

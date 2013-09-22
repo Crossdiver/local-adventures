@@ -8,6 +8,7 @@ module.exports = PageView.extend({
     template: templates.pages.search,
     render: function () {
         this.renderAndBind();
+        $('body').attr('id', 'pageSearch');
 
         this.renderCollection(this.collection, AdventureView, this.$('.people')[0]);
         if (!this.collection.length) {

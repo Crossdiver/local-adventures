@@ -2,16 +2,6 @@ body {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   color: #58676d; }
-  body .container {
-    background: url("/images/home-footer.jpg") 50% 100% no-repeat white;
-    -moz-background-size: 100% auto;
-    -webkit-background-size: 100% auto;
-    background-size: 100% auto;
-    min-height: 100%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0; }
 
 .btn,
 button,
@@ -74,16 +64,69 @@ h3 {
 .navbar {
   display: none; }
 
-section.page.home {
+.icons .icon {
+  background: url("/images/icons-sprite.png") no-repeat;
+  -moz-background-size: 550px 175px;
+  -webkit-background-size: 550px 175px;
+  background-size: 550px 175px;
+  -moz-border-radius: 50px;
+  -o-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  display: inline-block;
+  height: 50px;
+  margin: 5px;
+  overflow: hidden;
+  position: relative;
+  width: 50px; }
+.icons .nature {
+  background-position: -25px -100px; }
+  .icons .nature.checked {
+    background-position: -25px -25px; }
+.icons .accessibility {
+  background-position: -100px -100px; }
+  .icons .accessibility.checked {
+    background-position: -100px -25px; }
+.icons .sports {
+  background-position: -175px -100px; }
+  .icons .sports.checked {
+    background-position: -175px -25px; }
+.icons .arts {
+  background-position: -250px -100px; }
+  .icons .arts.checked {
+    background-position: -250px -25px; }
+.icons .pets {
+  background-position: -325px -100px; }
+  .icons .pets.checked {
+    background-position: -325px -25px; }
+.icons .sights {
+  background-position: -400px -100px; }
+  .icons .sights.checked {
+    background-position: -400px -25px; }
+.icons .food {
+  background-position: -475px -100px; }
+  .icons .food.checked {
+    background-position: -475px -25px; }
+
+body#pageHome .container {
+  background: url("/images/home-footer.jpg") 50% 100% no-repeat white;
+  -moz-background-size: 100% auto;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
+  min-height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0; }
+body#pageHome section.page.home {
   padding: 3em 0 6em; }
-  section.page.home #logo {
+  body#pageHome section.page.home #logo {
     display: block;
     margin: 0 auto 3em;
     max-width: 508px;
     width: 80%; }
-
 @media screen and (max-height: 500px) {
-  body {
+  body#pageHome body {
     -moz-background-size: 100% 80%;
     -webkit-background-size: 100% 80%;
     background-size: 100% 80%; } }

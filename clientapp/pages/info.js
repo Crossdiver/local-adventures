@@ -5,5 +5,6 @@ module.exports = PageView.extend({
     template: templates.pages.info,
     render: function () {
         this.renderAndBind();
+        $('body').attr('id', 'pageInfo');
     }
 });
