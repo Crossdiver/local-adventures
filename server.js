@@ -41,8 +41,7 @@ var clientApp = new Moonboots({
         __dirname + '/clientapp/libraries/zepto.js'
     ],
     stylesheets: [
-        __dirname + '/public/css/bootstrap.css',
-        __dirname + '/public/css/theme.css',
+        __dirname + '/public/css/reset.css',
         __dirname + '/public/css/app.css'
     ],
     browserify: {
