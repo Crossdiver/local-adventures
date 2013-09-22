@@ -1,11 +1,89 @@
 body {
   font-family: "Raleway", sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  color: #58676d; }
+  body .container {
+    background: url("/images/home-footer.jpg") 50% 100% no-repeat white;
+    -moz-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    min-height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0; }
+
+.btn,
+button,
+input[type="button"],
+input[type="submit"] {
+  -moz-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+  -webkit-border-radius: 0.25em;
+  border-radius: 0.25em;
+  background: #94acb5;
+  border-bottom: 3px solid #6c8b97;
+  color: white;
+  display: inline-block;
+  font-size: 1.1em;
+  font-weight: 600;
+  line-height: 3em;
+  -moz-opacity: 0.85;
+  -webkit-opacity: 0.85;
+  opacity: 0.85;
+  filter: alpha(opacity=85);
+  padding: 0 2em;
+  text-shadow: 0 -1px 1px #6c8b97;
+  -moz-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear; }
+  .btn:focus, .btn:hover,
+  button:focus,
+  button:hover,
+  input[type="button"]:focus,
+  input[type="button"]:hover,
+  input[type="submit"]:focus,
+  input[type="submit"]:hover {
+    -moz-opacity: 0.99;
+    -webkit-opacity: 0.99;
+    opacity: 0.99;
+    filter: alpha(opacity=99); }
+  .btn.primary,
+  button.primary,
+  input[type="button"].primary,
+  input[type="submit"].primary {
+    background-color: #f06c4d;
+    border-color: #cd5539;
+    text-shadow: 0 -1px 1px #cd5539; }
+
+h1, h2, h3 {
+  color: black;
+  font-weight: 200;
+  padding: 1em 0; }
+
+h1 {
+  font-size: 1.8em; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.2em; }
+
+.navbar {
+  display: none; }
 
 section.page.home {
-  background: url("/images/home-footer.jpg") 50% bottom no-repeat;
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0; }
+  padding: 3em 0 6em; }
+  section.page.home #logo {
+    display: block;
+    margin: 0 auto 3em;
+    max-width: 508px;
+    width: 80%; }
+
+@media screen and (max-height: 500px) {
+  body {
+    -moz-background-size: 100% 80%;
+    -webkit-background-size: 100% 80%;
+    background-size: 100% 80%; } }

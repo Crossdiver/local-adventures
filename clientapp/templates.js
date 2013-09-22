@@ -21,7 +21,7 @@ exports.body = function anonymous(locals) {
 exports.head = function anonymous(locals) {
     var buf = [];
     with (locals || {}) {
-        buf.push('<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0"/><meta name="apple-mobile-web-app-capable" content="yes"/><link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon"/><link href="//fonts.googleapis.com/css?family=Raleway:200,400,600" rel="stylesheet" type="text/css"/>');
+        buf.push('<meta name="viewport" content="width=device-width,initial-scale=.75,maximum-scale=.75"/><meta name="apple-mobile-web-app-capable" content="yes"/><link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon"/><link href="//fonts.googleapis.com/css?family=Raleway:200,400,600" rel="stylesheet" type="text/css"/>');
     }
     return buf.join("");
 };
@@ -57,7 +57,7 @@ exports.pages.collectionDemo = function anonymous(locals) {
 exports.pages.home = function anonymous(locals) {
     var buf = [];
     with (locals || {}) {
-        buf.push('<section class="page home">');
+        buf.push('<section class="page home"><img id="logo" src="/images/header-logo.png" alt="LocalAdventures"/><h1>Discover free things<br/>to do around you.</h1><a href="/search" class="btn primary">Find an Adventure</a>');
         buf.push("</section>");
     }
     return buf.join("");
