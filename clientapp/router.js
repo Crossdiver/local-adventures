@@ -11,7 +11,8 @@ module.exports = Backbone.Router.extend({
     // ------- ROUTE HANDLERS ---------
     home: function () {
         app.renderPage(new HomePage({
-            model: me
+            model: me,
+            collection: app.adventures
         }));
     }
 });

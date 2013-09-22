@@ -9,8 +9,7 @@ var Router = require('./router');
 var tracking = require('./helpers/metrics');
 var MainView = require('./views/main');
 var Me = require('./models/me');
-var People = require('./models/people');
-
+var Adventures = require('./models/adventures')
 
 module.exports = {
     // this is the the whole app initter
@@ -22,7 +21,7 @@ module.exports = {
         var self = window.app = this;
 
         window.me = new Me();
-        this.people = new People();
+        this.adventures = new Adventures();
 
         // init our URL handlers and the history tracker
         this.router = new Router();

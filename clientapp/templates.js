@@ -12,7 +12,7 @@ exports.pages = {};
 exports.body = function anonymous(locals) {
     var buf = [];
     with (locals || {}) {
-        buf.push('<body><div class="container"><div class="navbar"><div class="navbar-inner"><a href="#" class="brand">Local Adventures</a><ul class="nav"><li><a href="/">home</a></li></ul></div></div><section id="pages"></section></div></body>');
+        buf.push('<body><div class="container"><nav class="navbar navbar-default"><div class="navbar-header"><button type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></span></button><a href="#" class="navbar-brand">Local Adventures</a><ul class="nav navbar-nav navbar-left"><li><a href="/">home</a></li></ul></div></nav><section id="pages"></section></div></body>');
     }
     return buf.join("");
 };
@@ -26,11 +26,11 @@ exports.head = function anonymous(locals) {
     return buf.join("");
 };
 
-// person.jade compiled template
-exports.includes.person = function anonymous(locals) {
+// adventures.jade compiled template
+exports.includes.adventures = function anonymous(locals) {
     var buf = [];
     with (locals || {}) {
-        buf.push('<li class="person"><img width="40" height="40" class="avatar"/><span class="name"></span><span> <a href="#" class="delete">delete</a></span></li>');
+        buf.push('<li class="adventure"><span class="name"></span><span> <a href="#" class="delete">delete</a></span></li>');
     }
     return buf.join("");
 };
@@ -39,7 +39,7 @@ exports.includes.person = function anonymous(locals) {
 exports.pages.home = function anonymous(locals) {
     var buf = [];
     with (locals || {}) {
-        buf.push('<section class="page home"><h2>Welcome to a skeleton for Local Adventures</h2><p>If you "view source" you\'ll see it\'s 100% client rendered.</p><p>Click around the site using the nav bar at the top. </p><p>Things to note:<ul><li>The url changes, no requests are made to the server.</li><li>Refreshing the page will always get you back to the same page</li><li>Page changes are nearly instantaneous</li><li>In development mode, you don\'t need to restart the server to see changes, just edit and refresh.</li><li>In production mode, it will serve minfied, uniquely named files with super agressive cache headers. To test:<ul> <li>in dev_config.json set <code>isDev</code> to <code>false</code>.</li><li>restart the server.</li><li>view source and you\'ll see minified css and js files with unique names.</li><li>open the "network" tab in chrome dev tools (or something similar). You\'ll also want to make sure you haven\'t disabled your cache.</li><li>without hitting "refresh" load the app again (selecting current URL in url bar and hitting "enter" works great).</li><li>you should now see that the JS and CSS files were both served from cache without making any request to the server at all.</li></ul></li></ul></p></section>');
+        buf.push('<section class="page home"><iframe width="100%" height="300" frameborder="0" src="http://a.tiles.mapbox.com/v3/crossdiver.map-bn8vfpfw.html#12/46.31030004039056/-119.30070877075194"></iframe><div id="adventures"></div></section>');
     }
     return buf.join("");
 };

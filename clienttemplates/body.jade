@@ -1,9 +1,16 @@
 body
   .container
-    .navbar
-      .navbar-inner
-        a.brand(href="#") Local Adventures
-        ul.nav
+    nav.navbar.navbar-default
+      .navbar-header
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
+            span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+
+        a.navbar-brand(href="#") Local Adventures
+
+        ul.nav.navbar-nav.navbar-left
           li
             a(href="/") home
     section#pages

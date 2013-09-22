@@ -42,6 +42,7 @@ var clientApp = new Moonboots({
     ],
     stylesheets: [
         __dirname + '/public/css/bootstrap.css',
+        __dirname + '/public/css/theme.css',
         __dirname + '/public/css/app.css'
     ],
     browserify: {
@@ -52,7 +53,6 @@ var clientApp = new Moonboots({
         templatizer(__dirname + '/clienttemplates', __dirname + '/clientapp/templates.js');
     }
 });
-
 
 // Set up our little demo API
 var api = require('./fakeApi');
